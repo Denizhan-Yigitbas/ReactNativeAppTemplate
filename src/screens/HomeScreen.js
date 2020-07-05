@@ -2,25 +2,16 @@ import React, { memo } from "react";
 import Background from "../components/Background";
 import Logo from "../components/Logo";
 import Header from "../components/Header";
-import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
+import Button from "../components/Button";
+import { logoutUser } from "../api/auth-api";
 
-const HomeScreen = ({ navigation }) => (
+
+const HomeScreen = () => (
   <Background>
-    <Logo />
-    <Header>Firebase Login</Header>
-
-
-    <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
-      Login
-    </Button>
-    <Button
-      mode="outlined"
-      onPress={() => navigation.navigate("RegisterScreen")}
-    >
-      Sign Up
-    </Button>
+    <Header>Home Screen</Header>
   </Background>
 );
+
 
 export default memo(HomeScreen);

@@ -8,14 +8,14 @@ import React, { Component } from 'react';
 
 
 import {
-  HomeScreen,
+  LoginHomeScreen,
   LoginScreen,
   RegisterScreen,
   ForgotPasswordScreen,
   AuthLoadingScreen,
   Dashboard,
-  TestScreen1,
-  TestScreen2
+  HomeScreen,
+  MyAccountScreen,
 } from "./screens";
 
 
@@ -50,20 +50,20 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 const TabNavigator = createBottomTabNavigator(
   {
     Home: {
-      screen: TestScreen1,
+      screen: HomeScreen,
       navigationOptions: ({ navigation }) => ({
         title: "Home",
       }),
     },
     Account: {
-      screen: TestScreen2,
+      screen: MyAccountScreen,
       navigationOptions: ({ navigation }) => ({
         title: "Account",
       })
     }
   },
   {
-    initialRouteName: "Account",
+    initialRouteName: "Home",
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) =>
         getTabBarIcon(navigation, focused, tintColor),
@@ -78,7 +78,7 @@ const TabNavigator = createBottomTabNavigator(
 
 const RootNavigator = createStackNavigator(
   {
-    HomeScreen,
+    LoginHomeScreen,
     LoginScreen,
     RegisterScreen,
     ForgotPasswordScreen,

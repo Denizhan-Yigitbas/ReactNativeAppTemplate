@@ -16,7 +16,7 @@ const AuthLoadingScreen = ({ navigation }) => {
       navigation.navigate("TabNavigator");
     } else {
       // User is not logged in
-      navigation.navigate("HomeScreen");
+      navigation.navigate("LoginHomeScreen");
     }
   });
 

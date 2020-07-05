@@ -1,4 +1,6 @@
 // Replace with your own firebase config!
+
+// Go to console.firebase.google.com to access
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyB7BVnt5iLfaZjrpgS50ikyugqtFI0Yl7M",
   authDomain: "recipeapp-e27d6.firebaseapp.com",
