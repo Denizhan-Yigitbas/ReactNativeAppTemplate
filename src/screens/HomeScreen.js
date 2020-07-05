@@ -10,9 +10,7 @@ const HomeScreen = ({ navigation }) => (
     <Logo />
     <Header>Firebase Login</Header>
 
-    <Paragraph>
-      This template supports Firebase authorization out of the box.
-    </Paragraph>
+
     <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
       Login
     </Button>

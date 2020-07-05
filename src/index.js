@@ -63,6 +63,7 @@ const TabNavigator = createBottomTabNavigator(
     }
   },
   {
+    initialRouteName: "Account",
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) =>
         getTabBarIcon(navigation, focused, tintColor),
