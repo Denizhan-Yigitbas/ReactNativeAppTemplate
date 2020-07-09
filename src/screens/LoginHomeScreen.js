@@ -8,10 +8,7 @@ import Paragraph from "../components/Paragraph";
 const LoginHomeScreen = ({ navigation }) => (
   <Background>
     <Logo />
-    <Header>Firebase Login</Header>
-
-
-    <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
+    <Button style={{marginTop: 20}}mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
       Login
     </Button>
     <Button

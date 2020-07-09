@@ -21,6 +21,8 @@ import firebase from "firebase/app";
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
+import { withNavigation } from "react-navigation";
+
 
 
 const MyAccountScreen = () => {

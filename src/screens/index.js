@@ -6,3 +6,4 @@ export { default as Dashboard } from './Dashboard';
 export { default as AuthLoadingScreen } from './AuthLoadingScreen';
 export { default as HomeScreen } from './HomeScreen';
 export { default as MyAccountScreen } from './MyAccountScreen';
+export { default as MessagingScreen } from './MessagingScreen';
