@@ -5,7 +5,7 @@ import StarRating from 'react-native-star-rating';
 import { ThemeColors } from 'react-navigation';
 import { theme } from '../core/theme'; 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 class RecipeItem extends Component {
   constructor(props) {
@@ -24,29 +24,31 @@ class RecipeItem extends Component {
   render() {
     const likedHeartIconName = this.state.recipeLiked ? "heart" : "heart-outline"
     return(
-      <View style={styles.recipeItem}>
-        <Image 
-          style={styles.recipeImg}
-          source={{
-            url: this.props.url
-          }}
-        />
-        <View style={styles.recipeContent}>
-          <View style={{flexDirection: "row", alignItems: "center"}}>
-            <Text style={styles.recipeTitle}>Chicken Tikka</Text>
-            <MaterialCommunityIcons name={likedHeartIconName} size={20} color={"red"} onPress={() => this.likeToggled()}/>
-          </View>
-          <StarReview
-            ratings={4}
-            stars={5}
-            starColor={theme.colors.primary}
-            reviews={30}
-            reviewsText="reviews"
+      <TouchableOpacity activeOpacity={0.6}>
+        <View style={styles.recipeItem}>
+          <Image 
+            style={styles.recipeImg}
+            source={{
+              url: this.props.url
+            }}
           />
-          <Text style={styles.recipeChef}>Chef: Denizhan Yigitbas</Text> 
-          <Text>Description</Text>
+          <View style={styles.recipeContent}>
+            <View style={{flexDirection: "row", alignItems: "center"}}>
+              <Text style={styles.recipeTitle}>Chicken Tikka</Text>
+              <MaterialCommunityIcons name={likedHeartIconName} size={20} color={"red"} onPress={() => this.likeToggled()}/>
+            </View>
+            <StarReview
+              ratings={4}
+              stars={5}
+              starColor={theme.colors.primary}
+              reviews={30}
+              reviewsText="reviews"
+            />
+            <Text style={styles.recipeChef}>Chef: Denizhan Yigitbas</Text> 
+            <Text>Description</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
